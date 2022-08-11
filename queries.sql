@@ -15,3 +15,5 @@ SELECT COUNT(escape_attempts), neutered FROM animals GROUP BY neutered;
 SELECT MIN(weight_kg) AS MinimumWeight FROM animals;
 SELECT MAX(weight_kg) AS MaximumWeight FROM animals;
 SELECT AVG(escape_attempts) AS Average FROM animals WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-12-31';
+
+SELECT name FROM animals WHERE owner_id = 4;
