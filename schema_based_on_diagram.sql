@@ -46,3 +46,11 @@ CREATE TABLE treatments (
     name VARCHAR(50),
     PRIMARY KEY (id)
 );
+
+-- create join table between medical_histories and treatments tables
+CREATE TABLE medical_histories_treatments (
+    id INT GENERATED ALWAYS AS IDENTITY,
+    treatment_id INT REFERENCES treatments (id) ON DELETE CASCADE,
+    medical_history_id INT REFERENCES medical_histories (id) ON DELETE CASCADE,
+    PRIMARY KEY (id)
+);
