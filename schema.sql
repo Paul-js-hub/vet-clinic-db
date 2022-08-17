@@ -56,3 +56,12 @@ CREATE TABLE visits (
     PRIMARY KEY (id)
 );
 
+-- performance audit
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+CREATE INDEX animal_id ON visits (animal_id);
+
+CREATE INDEX vet_id ON visits (vet_id);
+
+CREATE INDEX owner_email ON owners (email);
+
